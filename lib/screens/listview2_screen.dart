@@ -5,21 +5,28 @@ class Listview2Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final options = const ['batman', 'superman', 'spiderman', 'antman'];
+    const options = ['batman', 'superman', 'spiderman', 'antman'];
 
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('data'),
+      appBar: AppBar(
+        title: const Text('data'),
+        elevation: 0,
+        backgroundColor: Colors.indigo,
+      ),
+      body: ListView.separated(
+        itemCount: options.length,
+        itemBuilder: (context, index) => ListTile(
+          title: Text(options[index]),
+          trailing: const Icon(
+            Icons.arrow_forward_ios,
+            color: Colors.indigo,
+          ),
+          onTap: () {
+            // final heroe = options[index];
+          },
         ),
-        body: ListView(
-          children: [
-            ...options
-                .map((hero) => ListTile(
-                      title: Text(hero),
-                      trailing: const Icon(Icons.add),
-                    ))
-                .toList(),
-          ],
-        ));
+        separatorBuilder: (_, __) => const Divider(),
+      ),
+    );
   }
 }
