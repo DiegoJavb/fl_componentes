@@ -11,10 +11,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      // home: const CardScreen(),
       initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.routes,
+      routes: AppRoutes.getAppRoutes(),
       onGenerateRoute: (settings) => AppRoutes.onGenerateRoute(settings),
+      theme: ThemeData.light().copyWith(
+        //color primario
+        primaryColor: Colors.indigo[300],
+
+        //AppBar theme
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.indigo[300],
+          elevation: 0,
+        ),
+      ),
     );
   }
 }
