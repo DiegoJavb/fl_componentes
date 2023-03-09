@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fl_componentes/theme/app_theme.dart';
 
 class CustomCardType1 extends StatelessWidget {
-  const CustomCardType1({
-    super.key,
-  });
+  const CustomCardType1({super.key});
 
   @override
   Widget build(BuildContext context) {
