@@ -36,6 +36,12 @@ class AppRoutes {
       icon: Icons.align_vertical_bottom,
       name: 'Alert',
       screen: const AlertScreen(),
+    ),
+    MenuOption(
+      route: 'avatar',
+      icon: Icons.person,
+      name: 'Avatar',
+      screen: const AvatarScreen(),
     )
   ];
 
