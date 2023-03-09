@@ -27,7 +27,7 @@ class CustomCardType2 extends StatelessWidget {
             width: double.infinity,
             height: 230,
             fit: BoxFit.cover,
-            fadeInDuration: Duration(milliseconds: 300),
+            fadeInDuration: const Duration(milliseconds: 300),
           ),
           if (name != null)
             Container(
