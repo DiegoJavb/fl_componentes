@@ -6,13 +6,13 @@ import 'package:fl_componentes/models/models.dart';
 class AppRoutes {
   static const initialRoute = 'home';
   static final menuOptions = <MenuOption>[
-    //TODO: borrar home
-    MenuOption(
-      route: 'home',
-      icon: Icons.home,
-      name: 'Home',
-      screen: const HomeScreen(),
-    ),
+    //borrar home
+    // MenuOption(
+    //   route: 'home',
+    //   icon: Icons.home,
+    //   name: 'Home',
+    //   screen: const HomeScreen(),
+    // ),
     MenuOption(
       route: 'listview1',
       icon: Icons.home,
@@ -42,11 +42,18 @@ class AppRoutes {
       icon: Icons.person,
       name: 'Avatar',
       screen: const AvatarScreen(),
+    ),
+    MenuOption(
+      route: 'animated',
+      icon: Icons.brightness_1_outlined,
+      name: 'Animated Container',
+      screen: const AnimatedScreen(),
     )
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
+    appRoutes.addAll({'home': (BuildContext constext) => const HomeScreen()});
     for (final option in menuOptions) {
       appRoutes.addAll({option.route: (BuildContext context) => option.screen});
     }
