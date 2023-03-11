@@ -48,6 +48,12 @@ class AppRoutes {
       icon: Icons.brightness_1_outlined,
       name: 'Animated Container',
       screen: const AnimatedScreen(),
+    ),
+    MenuOption(
+      route: 'input',
+      icon: Icons.format_align_center,
+      name: 'Inputs',
+      screen: const InputScreen(),
     )
   ];
 

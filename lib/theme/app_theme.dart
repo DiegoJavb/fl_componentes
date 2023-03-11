@@ -30,5 +30,26 @@ class AppTheme {
         elevation: 0,
       ),
     ),
+
+    // Inputs
+    inputDecorationTheme: const InputDecorationTheme(
+      floatingLabelStyle: TextStyle(color: primary),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(20), topRight: Radius.circular(20)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(20), topRight: Radius.circular(20)),
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(20), topRight: Radius.circular(20)),
+      ),
+    ),
   );
+
+  static final ThemeData darkTheme = ThemeData.dark().copyWith();
 }
