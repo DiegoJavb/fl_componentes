@@ -25,34 +25,42 @@ class InputScreen extends StatelessWidget {
             key: myFormKey,
             child: Column(
               children: [
-                const CustomInputField(
+                CustomInputField(
                   hintText: 'Nombre del usuario',
                   labelText: 'Nombre',
                   icon: Icons.group_outlined,
                   suffixIcon: Icons.assignment_ind_outlined,
+                  formProperty: 'first_name',
+                  formValues: formValues,
                 ),
                 const SizedBox(height: 30),
-                const CustomInputField(
+                CustomInputField(
                   hintText: 'Apellido del usuario',
                   labelText: 'Apellido',
                   icon: Icons.group_outlined,
                   suffixIcon: Icons.assignment_ind_outlined,
+                  formProperty: 'last_name',
+                  formValues: formValues,
                 ),
                 const SizedBox(height: 30),
-                const CustomInputField(
+                CustomInputField(
                   hintText: 'Email del usuario',
                   labelText: 'Email',
                   type: TextInputType.emailAddress,
                   icon: Icons.group_outlined,
                   suffixIcon: Icons.assignment_ind_outlined,
+                  formProperty: 'email',
+                  formValues: formValues,
                 ),
                 const SizedBox(height: 30),
-                const CustomInputField(
+                CustomInputField(
                   hintText: 'Contraseña del usuario',
                   labelText: 'Contraseña',
                   isPassword: true,
                   icon: Icons.group_outlined,
                   suffixIcon: Icons.assignment_ind_outlined,
+                  formProperty: 'password',
+                  formValues: formValues,
                 ),
                 const SizedBox(height: 30),
                 ElevatedButton(
@@ -64,6 +72,7 @@ class InputScreen extends StatelessWidget {
                     FocusScope.of(context).requestFocus(FocusNode());
                     if (!myFormKey.currentState!.validate()) {
                       print('Formulario no valido');
+                      print(formValues);
                       return;
                     }
                     //Todo: imprimir valores del formulario
