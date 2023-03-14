@@ -60,6 +60,12 @@ class AppRoutes {
       icon: Icons.slideshow,
       name: 'Slider and Checks',
       screen: const SliderScreen(),
+    ),
+    MenuOption(
+      route: 'listviewBuilder',
+      icon: Icons.build_circle_outlined,
+      name: 'Listview Builder',
+      screen: const ListviewBuilderScreen(),
     )
   ];
 
