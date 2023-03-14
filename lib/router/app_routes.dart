@@ -54,6 +54,12 @@ class AppRoutes {
       icon: Icons.format_align_center,
       name: 'Inputs',
       screen: const InputScreen(),
+    ),
+    MenuOption(
+      route: 'slider',
+      icon: Icons.slideshow,
+      name: 'Slider and Checks',
+      screen: const SliderScreen(),
     )
   ];
 
